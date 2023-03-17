@@ -1,0 +1,537 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+
+/* /Introductory Header 1/ */
+
+h1{
+    font-family:'Bebas Neue', cursive;
+}
+
+h2{
+    font-family:'Bebas Neue', cursive;
+    font-size: 5vh;
+    line-height: 1;
+
+}
+
+p, h4{
+    font-family:'Martel', serif;
+    font-weight: 200;
+    font-size: 1.7vh;
+    line-height: 1.5;
+}
+
+header{
+    
+    overflow: hidden;
+    height: 100vh;
+    background-image: url(img/computer\ ngv.gif);
+    background-position: center;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: 70%;
+}
+
+.introduction{
+
+    height: 100vh;
+    padding-top: 20%;
+    padding-left: 25%;
+    padding-right: 25%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.introduction h1{
+    font-size: 8vh;
+    letter-spacing: 2px;
+    line-height: 1;
+    padding: 2%;
+}
+
+.introduction p{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/* /question ONE */
+
+.question-one{ 
+    position: relative;
+    height: 100vh;
+    padding-left: 45%;
+    padding-right: 5%;
+}
+
+.question-one h2{
+    padding-top: 50%;
+}
+
+.question-one p{
+    padding-top: 2%;
+}
+
+.container-left-1{
+    position: absolute;
+    width: 40%;
+    height: 80%;
+    top: 2%;
+    left: 2%;
+}
+
+.question-one img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* /question TWO */
+
+.question-two{
+    position: relative;
+    height: 100vh;
+    padding-left: 7%;
+    padding-right: 53%;
+}
+
+.question-two h2{
+    padding-top: 30%;
+}
+
+.question-two p{
+    padding-top: 2%;
+}
+
+.container-video-right-2{
+    position: absolute;
+    left: 55%;
+    bottom: 50%;
+}
+
+/* /question THREE */
+
+.question-three{
+    position: relative;
+    height: 100vh;
+    padding-left: 50%;
+    padding-right: 10%;
+}
+
+.question-three h2{
+    padding-top: 50%;
+}
+
+.question-three p{
+    padding-top: 2%;
+}
+
+.container-left-3{
+    position: absolute;
+    width: 40%;
+    height: 80%;
+    top: 2%;
+    left: 4%;
+}
+
+.question-three img{
+    max-width: 100%;
+    height: auto;
+}
+
+.container-video-left{
+    position: absolute;
+    right: 57%;
+    bottom: 5%;
+}
+
+/* /question FOUR */
+
+.question-four{
+    position: relative;
+    height: 100vh;
+    padding-left: 10%;
+    padding-right: 52%;
+}
+
+.question-four h2{
+    padding-top: 90%;
+}
+
+.question-four p{
+    padding-top: 2%;
+}
+
+.container-video-right{
+    position: absolute;
+    left: 50%;
+    bottom: 45%;
+}
+
+/* /question FIVE */
+
+.question-five{
+    position: relative;
+    height: 100vh;
+    padding-left: 50%;
+    padding-right: 7%;
+}
+
+.question-five h2{
+    padding-top: 80%;
+}
+
+.question-five p{
+    padding-top: 2%;
+}
+
+.container-left-5{
+    position: absolute;
+    width: 40%;
+    height: 80%;
+    top: 2%;
+    left: 4%;
+}
+
+.question-five img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* /question SIX */
+
+.question-six{
+    position: relative;
+    height: 100vh;
+    padding-left: 7%;
+    padding-right: 46%;
+}
+
+.question-six h2{
+    padding-top: 40%;
+}
+
+.question-six p{
+    padding-top: 2%;
+}
+
+.container-right-6{
+    position: absolute;
+    width: 40%;
+    height: 80%;
+    top: 2%;
+    left: 55%;
+}
+
+.question-six img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* /question SEVEN */
+
+.question-seven{
+    position: relative;
+    height: 100vh;
+    padding-left: 45%;
+    padding-right: 7%;
+}
+
+.question-seven h2{
+    padding-top: 50%;
+}
+
+.question-seven p{
+    padding-top: 2%;
+}
+
+.container-left-7{
+    position: absolute;
+    width: 40%;
+    height: 80%;
+    top: 2%;
+    left: 4%;
+}
+
+.question-seven img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* /question EIGHT */
+
+.question-eight{
+    position: relative;
+    height: 100vh;
+    padding-left: 5%;
+    padding-right: 48%;
+}
+
+.question-eight h2{
+    padding-top: 25%;
+}
+
+.question-eight p{
+    padding-top: 2%;
+}
+
+.container-right-8{
+    position: absolute;
+    width: 40%;
+    height: 80%;
+    top: 2%;
+    left: 55%;
+}
+
+.question-eight img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* /question NINE */
+
+.question-nine{
+    position: relative;
+    height: 100vh;
+    padding-left: 47%;
+    padding-right: 5%;
+}
+
+.question-nine h2{
+    padding-top: 40%;
+}
+
+.question-nine p{
+    padding-top: 2%;
+}
+
+.container-left-9{
+    position: absolute;
+    width: 40%;
+    height: 80%;
+    top: 2%;
+    left: 4%;
+}
+
+.question-nine img{
+    max-width: 90%;
+    height: auto;
+}
+
+/* /question TEN */
+
+.question-ten{
+    position: relative;
+    height: 100vh;
+    padding-left: 5%;
+    padding-right: 45%;
+}
+
+.question-ten h2{
+    padding-top: 50%;
+}
+
+.question-ten p{
+    padding-top: 2%;
+}
+
+.container-right-10{
+    position: absolute;
+    width: 40%;
+    height: 80%;
+    top: 2%;
+    left: 60%;
+}
+
+.question-ten img{
+    max-width: 100%;
+    height: auto;
+}
+
+.question-ten figcaption{
+    font-family: 'Martel', serif;
+    font-size: 1.5vh;
+}
+
+/* /question ELEVEN */
+
+.question-eleven{
+    position: relative;
+    height: 100vh;
+    padding-left: 50%;
+    padding-right: 7%;
+}
+
+.question-eleven h2{
+    padding-top: 40%;
+}
+
+.question-eleven p{
+    padding-top: 2%;
+}
+
+.container-left-11{
+    position: absolute;
+    width: 40%;
+    height: 80%;
+    top: 2%;
+    left: 0%;
+
+}
+
+.question-eleven img{
+    max-width: 100%;
+    height: auto;
+}
+
+.question-eleven figcaption{
+    font-family: 'Martel', serif;
+    font-size: 1.5vh;
+}
+
+/* /question TWELVE */
+
+.question-twelve{
+    position: relative;
+    height: 100vh;
+    padding-left: 10%;
+    padding-right: 50%;
+}
+
+.question-twelve h2{
+    padding-top: 70%;
+}
+
+.question-twelve p{
+    padding-top: 2%;
+}
+
+.container-right-12{
+    position: absolute;
+    width: 40%;
+    height: 80%;
+    top: 0%;
+    left: 60%;
+}
+
+.question-twelve img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* /question THIRTEEN */
+
+.question-thirteen{
+    position: relative;
+    height: 100vh;
+    padding-left: 50%;
+    padding-right: 10%;
+}
+
+.question-thirteen h2{
+    padding-top: 70%;
+}
+
+.question-thirteen p{
+    padding-top: 2%;
+}
+
+.container-left{
+    position: absolute;
+    width: 20%;
+    height: 40%;
+    top: 10%;
+    left: 0%;
+}
+
+.question-eleven img{
+    max-width: 100%;
+    height: auto;
+}
+
+.question-thirteen figcaption{
+    font-family: 'Martel', serif;
+    font-size: 1.5vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* /
+
+
+
+.introduction{
+    height: 100vh;
+}
+
+.introduction h1{
+    font-family:'Bebas Neue', cursive;
+    font-size: 8vh;
+    letter-spacing: 2px;
+    line-height: 1;
+
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 145%;
+    left: 55%;
+}
+
+.introduction h4{
+
+    
+    font-family: 'Martel', serif;
+    font-weight: 200;
+    font-size: 1.7vh;
+
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 140%;
+    left: 55%;
+}
+
+.introduction p{
+    font-family:'Martel', serif;
+    font-weight: 200;
+    font-size: 1.7vh;
+    line-height: 1.2;
+
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 162%;
+    left: 55%;
+    right: 5%;
+}
+
+*/
