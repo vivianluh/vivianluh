@@ -1,0 +1,199 @@
+
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  background-color: var(--col-02);
+}
+
+/* I employed a blue colour palette. The aim was to create a reliable looking website where users 
+are encouraged to filter through recipes in a calming and orderly manner, instead of having to 
+frantically find a recipe to cook */
+:root{
+  --col-01:#000000;
+  --col-02:#ffffff;
+  --col-03:rgb(0, 115, 255);
+  --col-04:rgb(199, 232, 255);
+  --col-05:rgb(141, 207, 255);
+  --border: 2px solid var(--col-01);
+}
+
+.heading{
+  padding-left: 2%;
+}
+
+.heading img{
+  width: 300px;
+  height: auto;
+}
+
+
+body{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--col-02);
+  color: var(--col-01);
+}
+
+/*
+  i've set up a basic flexbox for each recipe container - you might want to change some of the 
+  flex properties here on the container or on the individual flex items depending on how you want to style them
+*/
+
+
+
+
+/* FILTER SECTION */
+
+/* /* The stying of the filter box section aims to encourage individuals to find their specific recipe in a peaceful
+manner, in the hopes that they should not be overwhelmed with the amount of information displayed on each recipe. 
+Visual aesthetic goals was to ensure each filter button looked clean, and was easy to navigate  */
+
+.FilterSection{
+  padding: 2%;
+  background-color:  var(--col-04);
+}
+
+.FilterSection h2{
+  padding: 1%;
+  background-color:  var(--col-04);
+  text-align: center;
+
+}
+
+.FilterBox{
+  padding-left: 2%;
+  background-color: var(--col-04)
+} 
+
+summary{
+  position: relative;
+  display: flex;
+  padding: .5%;
+  background-color: var(--col-04);
+  font-size: large;
+  font-weight: bolder;
+}
+
+summary:hover{
+  cursor: pointer;
+  color: var(--col-03);
+}
+
+/* The hover function/colour change was utilised extensively to invite more user interactivity and direct users towards each 
+individual filter. */
+
+/* Border-radius was used to ensure the buttons had a soft and clean appearance and this was inspired by the button
+appearances from SortedFood. */
+
+.FilterButton{
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  border-radius: 25px;
+  background-color: var(--col-02);
+  cursor: pointer;
+}
+
+.FilterButton:hover {
+  background-color: var(--col-05);
+}
+
+
+/* Styling for highlighted button. Refer to filter.js */
+.active{
+  background-color: var(--col-03);
+  font-weight: bold;
+  color: var(--col-02);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* RECIPE SECTION */
+
+
+/* Each recipe section was styled in a similar manner to ensure continuity and keep things at a minimal so users
+are not overwhelmed with the amount of information presented within the page. Padding was key in allowing there to
+be white space surrounding each recipe. I found taste.com.au employed white space extensively around their recipe layout
+to focus the users attention on just the recipe. I achieved this through the use of padding and a white background colour. */
+
+
+
+.RecipeBox{
+  display: flex;
+  flex-direction: column;
+  /* border: var(--border); */
+  padding: 2%;
+  padding-left: 20%;
+}
+
+.RecipeName{
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-right: 50%;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+/* A bolder weight was employed on the type that corresponded with the filter category. This was to ensure users know what filters 
+are available to them even when they are scrolling down the page */
+
+.Author, .Cuisine, .Course, .Dietary{
+  font-weight: bold;
+}
+
+
+.Attribution{
+  padding-bottom: 2%;
+}
+
+
+
+
+/* BACK TO TOP BUTTON STYLING
+
+URL LINK TO TUTORIAL: https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+
+I customised the styling of the back to top button to fit the aesthetic of my entire recipe
+webpage. This included rounding the corners, and keeping within the colour palette. The simple
+hover interactivity was employed again to give users a simple yet obvious transition of the page
+transitioning to the top after it is pressed.
+
+
+
+
+*/
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+
+
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: var(--col-05);
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50px;
+
+}
+
+#myBtn:hover {
+  background-color: var(--col-03);
+}
