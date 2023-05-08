@@ -1,0 +1,222 @@
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+/* Basis for colour palette comes from 1bit Monitor Glow Palette by Polyducks */
+/* https://lospec.com/palette-list/1bit-monitor-glow */
+/* you're welcome to change the colours if you want or any of the other general page style */
+
+/* Stylistically, I utilised a colour palette that matched the visuals of the video. This was done 
+to establish harmony in the design of the video player in regards to the video itself, therefore creating 
+a cohesive presentation of information*/
+:root{
+  --col-01:#222323;
+  --col-02:#ffffff;
+  --col-03:#eca2ff;
+  --col-04:#f4f4f4;
+  --col-05:#bcbdbc;
+  --col-06:#6f6f6f;
+  --border: 1px solid var(--col-02);
+}
+
+/* I decided to place the video in the centre of the webpage to mimic a theatrical presentation of the video, 
+This again is inspired by the layout of Vimeo, where when a video is clicked, it opens in a way that the video is always
+positioned in the centre of the webpage. */
+
+.video-player-wrapper{
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* becuase I want to overlay the play icon on the video they need to be in their own wrapper */
+.video-element-wrapper{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+#videoElement{
+  width: 100%;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+/* In order to change the colour of the SVG, I utilised a CSS 'filter' as changing the 
+'colour' did not do anything to the SVG. A handy website that I found allowed me to convert a 
+hexadecimal colour (which I use for my colour palette) into a CSS filter
+This is the website for that: https://codepen.io/sosuke/pen/Pjoqqp  
+
+Before the video play overlay was black which was too dark to be seen clearly. To immediately establish
+information hierarchy for viewers and show that the video is paused, I changed the colour of the SVG to an 
+opaque white colour which overlayed in a way that wasn't jarring to the visual presentation of the video player 
+but was easily legible. 
+*/
+
+
+#videoPlayOverlay{
+  width: 8rem;
+  height: 8rem;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  justify-self: center;
+  align-self: center;
+  opacity: 0.9;
+  display: none;
+  filter: invert(100%) sepia(16%) saturate(1393%) hue-rotate(102deg) brightness(112%) contrast(92%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* I implemented some spacing (padding) between the video control buttons. This will hopefully ensure users do not accidently click
+on the button they don't want to because there isn't any seperation between buttons. I also thought the seperation between the video
+and the video player would establish hierarchy with the video itself being the main focus, followed by the video player underneath. This
+was further established by changing the colour of the progress bar to a light grey (as supposed to the dark grey before)*/
+
+/* Relevent feedback that was employed included utilising the :hover and :active pseudo classes that were introduced in the 
+previous assignment. Again, as the user hovers over each individual button, the cursor will change to a pointer as well as 
+change colour to ensure users know that it is in fact a button, and something will change if the button is pressed. Employing a 
+transition allowed the feedback to look and feel sleek and smooth. */
+
+/* I also decided to scale up the fullscreen button as the user hovers over. This is a relevent piece of feedback and users
+are informed the video screen will 'scale up' or get bigger (full screen) if the button is clicked. This was inspired by the way
+Youtube employs a simple scale animatic to their full screen button when a user hovers over. */
+
+
+
+.video-controls-wrapper{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 2rem;
+  
+}
+/* this overwrites the above display:flex - something which is then undone when the JS loads */
+#controlsWrapper{
+  display: none;
+}
+
+.video-control-button{
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: .1rem;
+  border: none;
+  cursor: pointer;
+  /* opacity: 0.1; */
+  background-color: var(--col-02);
+  border-radius: 5px;
+  margin-left: 1rem;
+}
+
+.video-control-button:hover{
+  background-color: var(--col-05);
+  transition: 0.3s ease-in;
+}
+
+.video-control-button:active{
+  background-color: var(--col-06);
+}
+.button-icon{
+  pointer-events: none;
+}
+
+#playButton{
+  background-image: url('./icons/play.svg');
+  margin-left: 0;
+}
+
+#muteButton{
+  background-image: url('./icons/mute.svg');
+}
+
+#fullscreenButton{
+  background-image: url('./icons/fullScreen.svg');
+}
+
+#fullscreenButton:hover{
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out; 
+}
+
+
+
+
+
+/* Due to the player controls having a softer appearance through the use of smooth transition feedback and opaque colour changes, 
+I decided to round the corners of the progress bar to allow the whole visual presentation of the video player to flow together 
+aesthetically. Somthing that I thought strengthened the cohesive styling of the entire page was changing the colour of the progress
+bar to match the main colour of the video.*/
+
+
+.video-progress-bar{
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  height: 2.5rem;
+  flex-grow: 1;
+  cursor: pointer;
+  background-color: var(--col-04);
+  border-radius: 25px;
+  margin-left: 1rem;
+  /* opacity: 0.; */
+  /* box-shadow: 0 1px 2px var(--col-03) inset; */
+}
+
+
+::-moz-progress-bar {
+  background-color: var(--col-01);
+  border-radius: 25px;
+}
+
+::-webkit-progress-bar {
+  background-color: var(--col-04);
+  /* box-shadow: 0 1px 2px var(--col-03) inset; */
+  border-radius: 25px;
+}
+::-webkit-progress-value {
+  background-color: var(--col-03);
+  border-radius: 25px;
+}
+
+/* .timeline-loading{
+  background-image: -moz-repeating-linear-gradient(45deg, var(--col-03) 0% 2%, transparent 2% 4%, red 4%);
+  background-size: 200% 100%;
+  animation: loadingAnimation 4s linear infinite;
+} */
+
+@keyframes loadingAnimation {
+  100%{
+    background-position: 50% 0%;
+  }
+}

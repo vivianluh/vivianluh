@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Player Experiment</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="playerControls.js" defer></script>
+
+  </head>
+
+  <body>
+
+    <!-- this element holds all of the media player -->
+    <div class="video-player-wrapper">
+      <!-- this element holds the video element and the overlay -->
+      <div class="video-element-wrapper">
+
+        <video id="videoElement" controls>
+          <source src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4" type="video/mp4">
+        </video>
+
+        <img id="videoPlayOverlay" src="./icons/play.svg">
+
+      </div>
+      <!-- this element holds all of the custom controls -->
+      <!-- Stylistically, the goal was to create a media playback that looked sleek, professional, 
+           and clean, drawing inspiration from the layout and visual presentation of Youtube, Vimeo, 
+           and online design portfolios that present examples of video works to their clients.  -->
+
+      <!-- As the display was in flexbox, I decided to move both the mute button and full screen button
+      to the right of the video player. This was to ensure the play/pause button is its stand alone feature 
+      (highlighting how I believe this is the most important feature of a video player when users interact with the playback buttons as 
+      it essentially controls whether the user wants to watch or stop watching). This was directly motivated by the layout of vimeo
+      which has the play/pause button by itself on the left. I believe this also informs users of a hierarchy of which buttons should 
+      be utilised to most to least and as a result the play/pause button is the most important feature of the video player. -->
+
+
+      <div class="video-controls-wrapper" id="controlsWrapper">
+
+        <button class="video-control-button" id="playButton"></button>
+
+        <progress class="video-progress-bar" id="progressBar" value="0"></progress>
+
+        <button class="video-control-button" id="muteButton"></button>
+
+        <!-- I believe the fullscreen feature is the most appropriate choice for my media player. As I am motivated to create
+        a media playback that draws inspiration from a portfolio/showcase, the full screen button will allow viewers to consume 
+        the media at their fullest attention and minimise distraction. The media consists of music and animations, so allowing users to
+        have the choice of focusing just on the visual and audio of the media will ensure the media itself is maximised. -->
+
+
+
+        <button class="video-control-button" id="fullscreenButton"></button>
+
+      </div>
+
+    </div>
+
+  </body>
+
+</html>
