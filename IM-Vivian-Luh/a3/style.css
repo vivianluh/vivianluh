@@ -1,0 +1,79 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Pangolin', cursive;
+    
+}
+
+body{
+    position: relative;
+    text-align: center;
+    background-color: rgb(255, 85, 0);
+}
+
+.buttons{
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    bottom: 5%;
+}
+
+
+/* Information button */
+
+#modalDialog{
+    position: absolute;
+    top: 2%;
+  
+    font-family: 'Pangolin', cursive;
+    margin: 5%;
+    padding: 5%;
+    padding-bottom: 8%;
+    border-color: white;
+    border-radius: 25px;
+    
+  }
+  
+  /* we can use the ::backdrop pseudo selecter on our dialog element to change the overlay colour */
+  #modalDialog::backdrop{
+    background-color: rgba(255, 207, 165, 0.418);
+  }
+  
+  #showModal{
+    position: absolute;
+    top: 3%;
+    left: 2%;
+    background-color: #000000;
+    padding: 1px 1px;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 100px;
+    text-align: center;
+    font-family: 'Pangolin', cursive;
+  }
+  
+  #showModal:hover{
+    background-color: rgb(255, 55, 0);
+    color: white;
+  }
+  
+  #closeModal{
+    position: absolute;
+    bottom: 5%;
+    left: 45%;
+    background-color: #ff9155;
+    color: black;
+    font-size: 16px;
+    padding: 15px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 100px;
+    text-align: center;
+  }
+  
+  #closeModal:hover{
+    background-color: rgb(255, 60, 0);
+    color: white;
+  }
+  
+
