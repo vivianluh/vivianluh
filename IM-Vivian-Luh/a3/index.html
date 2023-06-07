@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- here we're using the dialog element to hold our modal -->
+    <dialog id="modalDialog">
+        <p> This browser-based interactive project showcases a small, cartooned animation that is prompted as soon as 
+            the user clicks and drags their cursor around the page. The animation will move forwards or backwards in 
+            relation to the position of the user's cursor and will stop on its frame as soon as the user's mouse button 
+            is lifted. The animation consists of a person who seems rather dull and emotionless, however there is a 
+            certain hidden frame which reveals their 'fun' side. Users are encouraged to play around with the interactive 
+            animation in the hopes that when they lift their mouse up, the animation pauses on that hidden frame. 
+        </p>
+
+        <p>
+            The adjective and principle pairing this interactive animation reflects is Playfulness and Feedback and Agency. 
+            I wanted to explore the relationship and the reaction the user has when a digital environment returns something 
+            back (whether that be a signal, movement, a change in visuals) as a result of their actions. The reaction I want 
+            the user to radiate is one of playfulness and glee which will only be achieved if the digital environment is clear 
+            in its interactive instructions and the certain 'change' is one that has a playful and childlike aesthetic. Through 
+            this, I have decided to build an interactive animation that starts and changes the direction of an animation in 
+            accordance with the user's positioning of their mouse. This gives them the power to find and pause on that 'fun' hidden 
+            frame in the hopes that they find pleasure in an inherently amusing animation, forming a playful way of exerting the most 
+            out of the animation and the user's agency. With this interaction, hopefully the animation visuals and emotive goals are 
+            presented in the best light. The utilisation of a bold and bright colour palette and the simple cartooned artistic style aims to strengthen the playful 
+            aesthetic that is frequently seen in a variety of different cartoons and is directly inspired by the cartooning seen by Matt 
+            Groening. Moreover, the 'Information' button at the top left of the browser and the written instructions are also animated 
+            to push for this aesthetic. The utilisation of a bold and bright colour palette and the simple cartooned artistic style aims 
+            to strengthen the playful aesthetic that is frequently seen in a variety of different cartoons and is directly inspired by 
+            the cartooning seen by Matt Groening. Moreover, the 'Information' button at the top left of the browser and the written 
+            instructions are also animated to push for this aesthetic. 
+        </p>
+
+        <p>
+            This art piece explores a variety of technical implementations to create a fully-fledged moving animation, such as using 
+            <code>arrays</code> and <code>setInterval</code> to establish movement. In order to enact the moving frames, I referenced 
+            <a href="https://youtu.be/d66W0P8foI0">this tutorial</a> which went through setting up a setInterval function that moved 
+            the frames forwards and backwards. Instead of trying to track a video utilising the user's mouse, the implementation of 
+            frames was a much more orderly process. To build user interactivity, I wanted the user's mouse/trackpad to be the main output 
+            for this as it is one of the most used key amongst digital environments. When facilitating this, I used a series of event 
+            listeners to call for a <code>mousedown</code>, <code>mousemove</code> and <code>mouseup</code> event to authorise a Boolean variable for the user's position 
+            to then reference the setInterval functions I had already established. These technical design decisions were the most efficient 
+            in planning out and enacting the interactive elements and in creating a workflow that was succinct and ordered. 
+        </p>
+
+
+
+
+        <button id="closeModal">Close</button>
+      </dialog>
+
+      <!-- BUTTON AND INSTRUCTION ELEMENTS -->
+
+      <!-- I decided to keep within the animation style by also making sure the instructions at the top of the webpage and 
+        the information button at the top left were also animated. This was done through exported gifs and placed in its respective
+        places as it was the most time-efficient way to implement this style. 
+
+        The hand-drawn cartooned style of these elements strengthened the overall playful aesthetic of the webpage as it matched
+        the art style of the animation (use of bold black ink outline and simple line work).
+     -->
+    <img class="instructions" src="img/Instructions.gif" alt="" width="100%" height="100%" draggable="false">
+  
+    <button id="showModal">
+        <img src="img/information2.gif" alt="" width="60px" height="60px" id="buttonImage">
+    </button>
+
+<!-- ANIMATION FRAMES -->
+    
+    <img src="frames/1.png" alt="Image" width="100%" height="100%" id="images" draggable="false">
+
+<!-- TESTING USING BUTTONS -->
+    <!-- These commented out buttons were utilised to build the interactive art piece in a step-by-step manner, allowing me 
+    to easily and confidently understand the process for establishing this particular interactivity. Before setting up the
+    mousedown, mousemove, and mouseup events, I utilised the buttons to first enact any sought of animation movements to ensure
+    these functions worked first. This process allowed me to work in sections in a efficient and controlled manner.
+     -->
+<!-- 
+    <div class="buttons">
+        <button onclick="myAnimationBackward()"><</button>
+        <button onclick="myAnimationForward()">></button>
+
+        <button onclick="backwardInterval()">backward</button>
+        <button onclick="forwardInterval()">forward</button>
+    </div> -->
+
+
+    
+
+ 
+</body>
+
+</html>
+
+
+
+

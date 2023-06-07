@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+    /* The font choice also followed a cartooned hand-written style to ensure consistency
+    throughout the entire webpage, from the animation style, down to the typography used. */
+    font-family: 'Pangolin', cursive;
+    
+}
+
+body{
+    position: relative;
+    text-align: center;
+
+    /* Along with the colour palette of the frames, bright and bold colours were utilised
+    to ensure the art piece expressed a playful, vibrant, and youthful exuberance. To keep with 
+    the 3 colour rule in character design, I utilised orange as the principle colour, followed by the 
+    complimentary blue/aqua and then employed a hue of light orange to ensure harmony in the palette   */
+    background-color: rgb(255, 89, 0);
+    overflow: hidden;
+}
+
+.buttons{
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    bottom: 5%;
+}
+
+code{
+  background-color: #ffbf9d;
+}
+
+.instructions{
+  position: absolute;
+}
+
+#images{
+  padding-top: 3%;
+}
+
+
+/* Information button */
+
+/* The design of the information colour and its interactions were designed to ensure easy access in a 
+non-threatening way. A border-radius was heavily used on every box to create that softer, rounder appeal. 
+A cursor change was employed as the user hovers over the button to ensure users will recieve some sought of 
+feedback once pressed. The button also employed a colour change transition as the user hovers over the button 
+to strengthen this interaction.  */
+
+#modalDialog{
+    position: absolute;
+    top: 1%;
+    font-family: 'Pangolin', cursive;
+    margin: 6%;
+    padding: 5%;
+    padding-bottom: 6%;
+    border-color: white;
+    border-radius: 25px;
+    
+  }
+  
+  /* we can use the ::backdrop pseudo selecter on our dialog element to change the overlay colour */
+  #modalDialog::backdrop{
+    background-color: rgba(255, 207, 165, 0.418);
+  }
+  
+  #showModal{
+    position: absolute;
+    top: 3%;
+    left: 2%;
+    background-color: #000000;
+    padding: 1px 1px;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 100px;
+    text-align: center;
+    font-family: 'Pangolin', cursive;
+  }
+  
+  #showModal:hover{
+    background-color: rgb(255, 55, 0);
+    color: white;
+  }
+  
+  #closeModal{
+    position: absolute;
+    bottom: 5%;
+    left: 45%;
+    background-color: #ff9155;
+    color: black;
+    font-size: 16px;
+    padding: 15px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 100px;
+    text-align: center;
+  }
+  
+  #closeModal:hover{
+    background-color: rgb(255, 60, 0);
+    color: white;
+  }
+  
+
